@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Attempt Control System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<div class="shield">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+
+<div>
+<h1>Login Attempt Control System</h1>
+<p>Secure • Monitor • Protect</p>
+</div>
+
+</div>
+
+<div class="datetime">
+
+<i class="fa-regular fa-clock"></i>
+
+<span id="date"></span>
+
+|
+
+<span id="time"></span>
+
+</div>
+
+</header>
+
+<!-- MAIN -->
+
+<div class="container">
+
+<!-- LEFT -->
+
+<div class="login-panel">
+
+<div class="profile">
+
+<div class="avatar">
+<i class="fa-solid fa-user"></i>
+</div>
+
+<h2>Welcome Back!</h2>
+
+<p>Please sign in to your account</p>
+
+</div>
+
+<form id="loginForm">
+
+<label>Username</label>
+
+<div class="input-box">
+
+<i class="fa-regular fa-user"></i>
+
+<input
+type="text"
+id="username"
+placeholder="Enter your username">
+
+</div>
+
+<label>Password</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Enter your password">
+
+<i
+class="fa-solid fa-eye eye"
+id="togglePassword"></i>
+
+</div>
+
+<button type="submit">
+
+Login
+
+</button>
+
+<div class="or">
+
+<span>or</span>
+
+</div>
+
+<button
+type="button"
+class="forgot">
+
+<i class="fa-solid fa-lock"></i>
+
+Forgot Password?
+
+</button>
+
+</form>
+
+<div class="footer-text">
+
+<i class="fa-solid fa-shield"></i>
+
+Your security is our priority
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="status-panel">
+
+<div class="title">
+
+<i class="fa-solid fa-shield"></i>
+
+<div>
+
+<h2>Security Status</h2>
+
+<p>Real-time login attempt monitoring</p>
+
+</div>
+
+</div>
+
+<!-- ALERT -->
+
+<div class="alert">
+
+<div class="alert-left">
+
+<div class="alert-icon">
+
+<i class="fa-solid fa-lock"></i>
+
+</div>
+
+<div>
+
+<h3>ACCOUNT LOCKED</h3>
+
+<p>Too many failed login attempts.</p>
+
+<p>Please try again later.</p>
+
+</div>
+
+</div>
+
+<div class="timer">
+
+<p>Time Remaining</p>
+
+<h1 id="countdown">
+
+02:00
+
+</h1>
+
+<span>mm:ss</span>
+
+</div>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h1>3</h1>
+
+<p>Max Attempts</p>
+
+<span>Allowed</span>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-triangle-exclamation warning"></i>
+
+<h1 id="failedCount">
+
+0
+
+</h1>
+
+<p>Failed Attempts</p>
+
+<span>Current</span>
+
+</div>
+
+<div class="card">
+
+<i class="fa-regular fa-clock success"></i>
+
+<h1>2:00</h1>
+
+<p>Lock Duration</p>
+
+<span>Minutes</span>
+
+</div>
+
+</div>
+
+<!-- TABLE -->
+
+<h2 class="table-title">
+
+Recent Login Attempts
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Time</th>
+
+<th>Username</th>
+
+<th>Status</th>
+
+<th>IP Address</th>
+
+</tr>
+
+</thead>
+
+<tbody id="history">
+
+<tr>
+
+<td>--</td>
+
+<td>--</td>
+
+<td>--</td>
+
+<td>192.168.1.10</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<i class="fa-solid fa-circle-info"></i>
+
+After 3 failed attempts,
+your account will be locked
+for 2 minutes.
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
